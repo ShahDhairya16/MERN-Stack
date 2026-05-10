@@ -6,27 +6,29 @@
 var express = require('express');
 var app = express();
 const path = require('path');
-const cp = require('cookie-parser');
+// const cp = require('cookie-parser');
 var es = require('express-session');
 const staticPath = path.join(__dirname, '../frontend');
-app.use(express.urlencoded({extended:true}));
+// app.use(express.urlencoded({extended:true}));
 app.use(express.static(staticPath));
-app.use(cp());
+// app.use(cp());
 app.use(es({
     resave:true,
     saveUninitialized:true,
     secret:'123'
 }));
 app.get("/savesession",(req,res)=>{
-    req.session.fn=req.query.fn;
-    req.session.ln=req.query.ln;
-    req.session.pass=req.query.pass;
+    req.session.fns=req.query.fn;
+    req.session.lns=req.query.ln;
+    req.session.passs=req.query.pass;
     res.redirect('/fetch');
 })
 app.get('/fetch',(req,res)=>{
-    res.write(req.session.fn );
-    res.write(req.session.ln);
-    res.write(req.session.pass);
+    res.set('content-type','text/html');
+    console.log(req.sessionID);
+    res.write(req.session.fns );
+    res.write(req.session.lns);
+    res.write(req.session.passs);
     res.write('<a href="/deletesession">Logout</a>');
     res.end();
 })

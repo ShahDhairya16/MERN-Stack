@@ -1,10 +1,10 @@
 var express = require('express');
 var app = express();
 const path = require('path');
-const cp = require('cookie-parser');
+// const cp = require('cookie-parser');
 var es = require('express-session');
 
-app.use(cp());
+// app.use(cp());
 app.use(es({
     resave: true,
     saveUninitialized: true,
