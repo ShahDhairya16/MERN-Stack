@@ -6,7 +6,7 @@ const data = [
         id: 1,
         name: 'John Doe',
         branch: 'Computer Science' ,
-        city : 'New York'                                                                                                                                                                                                                                                                                           
+        city : 'New York'
     },{
         id: 2,
         name: 'John Doe',

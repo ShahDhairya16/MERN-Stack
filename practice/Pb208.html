@@ -1,0 +1,39 @@
+<!-- create a user signup form using Express.js and cookies. Implement the following
+requirements:
+Create a form with the following fields:
+o Name (input field)
+o Email (input field)
+o Gender (radio buttons: Male, Female, Others)
+o Submit button
+When the user submits the form, store their information (name, email, gender) in a
+cookie named "registered" that expires in 15 seconds.
+Display a confirmation message to the user after successfully submitting the form &
+Create a link to display the details stored in the "registered" cookie.
+When the user clicks to the link, retrieve the information from the cookie and display
+it on the /details page also include a link on the /details page to Logout. When the
+user clicks the link, user redirected to home page.
+Use post method. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/submit" method = 'post'>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required>Male
+        <input type="radio" id="female" name="gender" value="Female" required>Female
+        <input type="radio" id="others" name="gender" value="Others" required>Others<br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

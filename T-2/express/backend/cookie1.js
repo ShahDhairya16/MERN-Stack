@@ -15,7 +15,7 @@ app.post('/next',(req,res)=>{
     res.cookie('ln',req.body.ln);
     res.cookie('pass',req.body.pass);
     res.redirect('/admin');
-})
+})      
 app.get('/admin',(req,res)=>{
     res.clearCookie('ln');
     res.write(req.cookies.fn);
