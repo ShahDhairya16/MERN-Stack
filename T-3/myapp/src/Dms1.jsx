@@ -13,7 +13,7 @@ function Dms1() {
                     <li>Vue</li>
                 </ul>
             <img src={imgs} alt="fruit" width = '200'/>
-        </>
+        </>     
     )
 }
 export default Dms1
