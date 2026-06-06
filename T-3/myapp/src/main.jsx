@@ -1,13 +1,20 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 // import './index.css'
-import './MyProfile.css'
+// import './MyProfile.css'
 // import App from './App.jsx'
 // import Dms1 from './Dms1.jsx'
 // import StudentCard from './StudentCard.jsx'
-import MyProfile from './MyProfile.jsx'
+// import MyProfile from './MyProfile.jsx'
 // import Map2 from './Map1.jsx'
-import Product from './Product.jsx'
+// import Product from './Product.jsx'
+// import UR3 from './UR3.jsx'
+// import PC from './PC.jsx';
+import Comp from './Comp.jsx';
+import CP1 from './CP1.jsx';
+
+
+
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
@@ -25,9 +32,21 @@ createRoot(document.getElementById('root')).render(
   //   <StrictMode>
   //   <Map2 />
   // </StrictMode>
-  <StrictMode>
-    <Product />
-  </StrictMode>
+  // <StrictMode>
+  //   <Product />
+  // </StrictMode>
+  // <StrictMode>
+  //   <UR3 />
+  // </StrictMode>
+//  <StrictMode>
+//     <PC />
+//   </StrictMode>
+/* <StrictMode>
+  <Comp />
+</StrictMode>*/ 
+<StrictMode>
+  <CP1 />
+</StrictMode>
 
 
 )
